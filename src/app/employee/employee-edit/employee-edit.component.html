@@ -1,0 +1,86 @@
+<div class="card">
+    <div class="card-header">
+        {{pageTitle}}
+    </div>
+
+    <div class="card-body">
+        <form novalidate (ngSubmit)="saveEmployee()" [formGroup]="employeeForm">
+
+            <div class="form-group row mb-2">
+                <label class="col-md-2 col-form-label" for="employeeNameId">Name</label>
+                <div class="col-md-8">
+                    <input class="form-control" id="employeeNameId" type="text" placeholder="Name (required)"
+                        formControlName="name" [ngClass]="{'is-invalid': displayMessage.name }" />
+                    <span class="invalid-feedback">
+                        {{displayMessage.name}}
+                    </span>
+                </div>
+            </div>
+
+            <div class="form-group row mb-2">
+                <label class="col-md-2 col-form-label" for="addressId">Address</label>
+                <div class="col-md-8">
+                    <input class="form-control" id="addressId" type="text" placeholder="Address"
+                        formControlName="address" [ngClass]="{'is-invalid': displayMessage.address}" />
+                    <span class="invalid-feedback">
+                        {{displayMessage.address}}
+                    </span>
+                </div>
+            </div>
+
+            <div class="form-group row mb-2">
+                <label class="col-md-2 col-form-label" for="genderId">Gender</label>
+                <div class="col-md-8">
+                    <input class="form-control" id="genderId" type="text" placeholder="Gender" formControlName="gender"
+                        [ngClass]="{'is-invalid': displayMessage.gender}" />
+                    <span class="invalid-feedback">
+                        {{displayMessage.gender}}
+                    </span>
+                </div>
+            </div>
+
+            <div class="form-group row mb-2">
+                <label class="col-md-2 col-form-label" for="companyId">Company</label>
+                <div class="col-md-8">
+                    <input class="form-control" id="companyId" type="text" placeholder="Company"
+                        formControlName="company" [ngClass]="{'is-invalid': displayMessage.gender}" />
+                    <span class="invalid-feedback">
+                        {{displayMessage.company}}
+                    </span>
+                </div>
+            </div>
+
+            <div class="form-group row mb-2">
+                <label class="col-md-2 col-form-label" for="designationId">Designation</label>
+                <div class="col-md-8">
+                    <input class="form-control" id="designationId" type="text" placeholder="Designation"
+                        formControlName="designation" [ngClass]="{'is-invalid': displayMessage.designation}" />
+                    <span class="invalid-feedback">
+                        {{displayMessage.designation}}
+                    </span>
+                </div>
+            </div>
+
+            <div class="form-group row mb-2">
+                <div class="offset-md-2 col-md-6">
+                    <button class="btn btn-primary mr-3" style="width:100px;" type="submit"
+                        [title]="employeeForm.valid ? 'Save your entered data' : 'Disabled until the form data is valid'"
+                        [disabled]="!employeeForm.valid">
+                        Save
+                    </button>
+                    <button class="btn btn-outline-secondary mr-3" style="width:140px;" type="button"
+                        title="Cancel your edits" [routerLink]="['/employees']">
+                        Cancel
+                    </button>
+                    <button class="btn btn-outline-warning" *ngIf="employee.id != '0'" style="width:100px" type="button"
+                        title="Delete this product" (click)="deleteEmployee()">
+                        Delete
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="alert alert-danger" *ngIf="errorMessage">{{errorMessage}}
+    </div>
+</div>

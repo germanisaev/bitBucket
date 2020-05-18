@@ -1,0 +1,52 @@
+{
+  "employees": [
+    {
+      "id": "496f04a0-5c6d-400f-a0a8-0929088dc41e",
+      "name": "Shimi Cochen",
+      "address": "Tel-Aviv",
+      "gender": "Male",
+      "company": "NessIT",
+      "designation": "Technical Manager"
+    },
+    {
+      "id": "03810397-381c-4b9d-85f6-d7c87622e518",
+      "name": "German Isaev",
+      "address": "Herzelia",
+      "gender": "Male",
+      "company": "Matrix",
+      "designation": "Project Manager"
+    },
+    {
+      "id": "fae305e5-a9bc-4de9-aed9-deaf627630ff",
+      "name": "Elizabeth Fuzailov",
+      "address": "Modiin",
+      "gender": "Female",
+      "company": "Netcraft Academy",
+      "designation": "Web Designer"
+    },
+    {
+      "id": "5c606284-2ecf-4f7d-8a05-3ef94b8fb330",
+      "name": "Ziv Rubin",
+      "address": "Jerusalem",
+      "gender": "Male",
+      "company": "TessNet",
+      "designation": "Economist"
+    },
+    {
+      "id": "1df8d9a4-0d28-46cb-b216-a15af6e3ffd8",
+      "name": "Shiri Ben Kimhi",
+      "address": "Sderot",
+      "gender": "Female",
+      "company": "Elbit System",
+      "designation": "Manager IT"
+    },
+    {
+      "id": "a543066e-5994-4a9c-9f64-50a70bf6af27",
+      "name": "Daniel Tarshish",
+      "address": "Jerusalem",
+      "gender": "Male",
+      "company": "SysNet",
+      "designation": "Manager QA"
+    }
+  ]
+}
